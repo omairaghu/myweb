@@ -19,7 +19,7 @@ pipeline{
         stage("deploy-dev"){
             steps{
                 sshagent(['tomcat-new']) {
-                sh "scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/declarative/target  ec2-user@13.232.197.244:/root/opt/apache-tomcat-9.0.86/webapps/"
+                sh "scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/declarative/target  ec2-user@13.232.197.244:/opt/apache-tomcat-9.0.86/webapps"
                     
                    
                 
